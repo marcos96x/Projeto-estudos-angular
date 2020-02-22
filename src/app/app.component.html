@@ -1,0 +1,19 @@
+<app-nav-bar></app-nav-bar>
+<br>
+
+<div *ngIf="evento =='true'">
+  <app-inicial-usuario></app-inicial-usuario>
+</div>
+<div *ngIf="estado == 'login'">
+    <app-login (emissor)="onAcesso($event)"></app-login>
+    <div class="row center">
+        <p (click)="alteraEstado('cadastro')">Não possui conta? Entre.</p>
+    </div>
+</div>
+
+<div *ngIf="estado == 'cadastro'">
+    <app-cadastro></app-cadastro>
+    <div class="row center">
+        <p (click)="alteraEstado('login')">Já possui conta? Entre.</p>
+    </div>
+</div>

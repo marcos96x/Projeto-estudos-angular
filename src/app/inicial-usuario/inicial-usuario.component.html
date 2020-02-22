@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col s4">
+            <app-dados-usuario #usuario ></app-dados-usuario>
+        </div>
+        <div class="col s8">
+            <div class="row">
+                <app-post-usuario #posts ></app-post-usuario>
+            </div>
+            <div class="row">
+                <app-visualizar-posts [dados]="usuario.usuario" [postsEnviados]="posts.posts"> </app-visualizar-posts>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</div>
